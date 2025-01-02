@@ -26,7 +26,8 @@ function AddBookPage() {
       author,
       description,
       category,
-      rating: parseFloat(rating)
+      rating: parseFloat(rating),
+      publishYear // Ensure publishYear is included
     };
 
     dispatch(addBook(newBook));
@@ -36,7 +37,7 @@ function AddBookPage() {
   return (
     <div className="add-book-page">
       <h2>Add a New Book</h2>
-      <form onSubmit={handleSubmit}className="add-book-form">
+      <form onSubmit={handleSubmit} className="add-book-form">
         <input
           type="text"
           placeholder="Title"
@@ -57,27 +58,23 @@ function AddBookPage() {
           onChange={(e) => setDescription(e.target.value)}
           required
         />
-
-
-         <select
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        required
-      >
-        <option value={category} disabled>category</option>
-        <option value="Fiction">Fiction</option>
-        <option value="Sci-Fi">Sci-Fi</option>
-        <option value="Non-Fiction">Non-Fiction</option>
-      </select>
-
-      <input
-        type="number"
-        placeholder="Publish Year"
-        value={publishYear} // Ensure this is correctly bound to your state
-        onChange={(e) => setPublishYear(e.target.value)} // Set the correct setter function for publishYear
-        required
-      />
-
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          required
+        >
+          <option value="" disabled>Select Category</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+        </select>
+        <input
+          type="number"
+          placeholder="Publish Year"
+          value={publishYear}
+          onChange={(e) => setPublishYear(e.target.value)}
+          required
+        />
         <input
           type="number"
           placeholder="Rating"
@@ -85,7 +82,6 @@ function AddBookPage() {
           onChange={(e) => setRating(e.target.value)}
           required
         />
-        
         <button type="submit">Add Book</button>
       </form>
       {showPopup && <div className="popup">Book added successfully!</div>}

@@ -13,17 +13,15 @@ function BookDetailsPage() {
   }
 
   return (
-    
     <div className="book-details">
-      <h5>id:{book.id}</h5>
+      <h5>id: {book.id}</h5>
       <h2>{book.title}</h2>
       <h3 className="animated-text">{book.author}</h3>
       <p>Category: {book.category}</p>
       <p>Published: {book.publishYear}</p>
-      <p>{book.description}</p>
+      <p>Description: {book.description}</p>
       <p className="rating">Rating: {book.rating}</p>
       <button onClick={() => navigate('/browse-books')}>Back to Browse</button>
-      {/* <button onClick={()=>navigate('/')}>home-button</button> */}
     </div>
   );
 }

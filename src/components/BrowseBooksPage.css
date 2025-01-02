@@ -1,0 +1,135 @@
+.browse-books-page {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.categories {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.categories a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: #dca518;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: color 0.3s ease;
+}
+
+.categories a:hover {
+  color: whitesmoke;
+  /* text-decoration: underline; */
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #dca518;
+  outline: none;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.book-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.book-card h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.book-genres span {
+  display: inline-block;
+  background-color: #f0c674;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px 2px;
+  font-size: 0.8rem;
+}
+
+.book-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.book-card a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-card {
+    width: 80%;
+  }
+
+  .categories a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-card {
+    width: 95%;
+  }
+
+  .search-input {
+    width: 90%;
+  }
+}

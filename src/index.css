@@ -1,0 +1,75 @@
+body {
+  font-family: 'Arial', sans-serif;
+  /* background: #f4f4f4; */
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Make sure HomePage content scrolls if it exceeds the viewport height */
+.home-page {
+  min-height: 100vh; /* Ensure the page takes up at least the full height of the viewport */
+  overflow-y: auto;  /* Enable vertical scrolling if content overflows */
+  padding: 20px;     /* Add some padding around the content */
+  box-sizing: border-box; /* Include padding in the element's total height calculation */
+}
+/* Ensure body content isn't hidden behind navbar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding-top: 70px; /* Ensure content is below the fixed navbar */
+}
+
+main {
+  padding: 20px;
+  min-height: 100vh;
+}
+

@@ -1,0 +1,81 @@
+.add-book-page {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.add-book-page h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-book-form input,
+.add-book-form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.add-book-form input:focus,
+.add-book-form textarea:focus {
+  border-color: #f0c674;
+  outline: none;
+}
+
+.add-book-form button {
+  background-color: #f0c674;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-book-form button:hover {
+  background-color: #e0b564;
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(-50%);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(-50%);
+  }
+}

@@ -1,0 +1,137 @@
+.book-details {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin: 50px auto;
+  width: 60%;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-details:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.book-details h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  text-align: center;
+  border-bottom: 2px solid #f0c674;
+  padding-bottom: 10px;
+  animation: slide-in 2s ease-in-out;
+}
+
+.book-details .animated-text {
+  font-size: 1.2rem;
+  color: #777;
+  text-align: center;
+  margin-top: 10px;
+  animation: fade-in 3s ease-in-out;
+  font-style: italic;
+}
+
+.book-details p {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.book-details .rating {
+  font-size: 1.3rem;
+  color: #f0c674;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.book-details button {
+  background: linear-gradient(45deg, #333, #555);
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.book-details button:hover {
+  background: linear-gradient(45deg, #f0c674, #ffda85);
+  color: #333;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-details {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .book-details h2 {
+    font-size: 1.6rem;
+  }
+
+  .book-details p {
+    font-size: 1rem;
+  }
+
+  .book-details button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-details {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .book-details h2 {
+    font-size: 1.4rem;
+  }
+
+  .book-details p {
+    font-size: 0.9rem;
+  }
+
+  .book-details button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}

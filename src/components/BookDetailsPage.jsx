@@ -23,7 +23,7 @@ function BookDetailsPage() {
       <p>{book.description}</p>
       <p className="rating">Rating: {book.rating}</p>
       <button onClick={() => navigate('/browse-books')}>Back to Browse</button>
-      <button onClick={()=>navigate('/')}>home-button</button>
+      {/* <button onClick={()=>navigate('/')}>home-button</button> */}
     </div>
   );
 }

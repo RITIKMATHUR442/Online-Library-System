@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>© 2024 Ritik Mathur. All Rights Reserved.</p>
+        <p>© 2025 Ritik Mathur. All Rights Reserved.</p>
         <div className="social-links">
           <a href="https://github.com/RITIKMATHUR442/callbackhell-project" target="_blank" rel="noopener noreferrer" className="social-link">
             <img src="/ngitbub.png" alt="GitHub" className="social-icon" />
